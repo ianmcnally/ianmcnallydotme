@@ -7,20 +7,26 @@ Today I was adding tests to [Farely](http://farely.io). I wanted to test that wh
 
 According to React's [testing documentation](https://facebook.github.io/react/docs/test-utils.html), I should be able to trigger a change with:
 
-var newValue \= '27';
+```js
+var newValue = '27';
 React.addons.TestUtils.Simulate.change(input.getDOMNode(), {target : {value : newValue}});
+```
 
-(Note: there's really no documentation on the second argument {target: ...}. Grumble.)
+(Note: there's really no documentation on the second argument `{target: ...}`. Grumble.)
 
 Then I could assert:
 
+```js
 expect(component.state.inputValue).toEqual(newValue);
+```
 
-But, as my tone might have implied, it's not _that_ straightforward. I finally landed on a relevant [Github issue](https://github.com/facebook/react/issues/3151). What you have to do is change the input's value manually, then call \`change\`:
+But, as my tone might have implied, it's not _that_ straightforward. I finally landed on a relevant [Github issue](https://github.com/facebook/react/issues/3151). What you have to do is change the input's value manually, then call `change`:
 
-var newValue \= '27';
-input.getDOMNode().value \= newValue;
+```js
+var newValue = '27';
+input.getDOMNode().value = newValue;
 React.addons.TestUtils.Simulate.change(input.getDOMNode());
+```
 
 Then you can assert to your heart's content, because the change will take place.
 

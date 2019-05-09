@@ -7,7 +7,7 @@ I just open sourced a currency masker for React!
 
 Check it out:
 
-\[caption id="" align="alignnone" width="412.0"\]![ An input that is getting masked (really, re-evaluated) as currency. ](http://static1.squarespace.com/static/554569a4e4b0b68214c1f5d9/55457b34e4b0fca745eb358d/556bb104e4b024eba5be4176/1433121034765//img.gif) An input that is getting masked (really, re-evaluated) as currency. \[/caption\]
+![ An input that is getting masked (really, re-evaluated) as currency. ](http://static1.squarespace.com/static/554569a4e4b0b68214c1f5d9/55457b34e4b0fca745eb358d/556bb104e4b024eba5be4176/1433121034765//img.gif)
 
 It takes a normal number input, and converts the last two digits into cents.
 

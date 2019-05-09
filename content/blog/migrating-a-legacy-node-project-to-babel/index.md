@@ -13,8 +13,9 @@ So, we were at a crossroads. We needed to either refactor the legacy code, or at
 
 The solution involved removing the ES2015 preset and manually including all the plugins. For the troublesome modules plugin, I was able to pass a parameter setting strict mode to false. My .babelrc became:
 
+```javascript
 {
-  "plugins": \[
+  "plugins": [
     "check-es2015-constants",
     "transform-es2015-arrow-functions",
     "transform-es2015-block-scoped-functions",
@@ -34,16 +35,18 @@ The solution involved removing the ES2015 preset and manually including all the 
     "transform-es2015-typeof-symbol",
     "transform-es2015-unicode-regex",
     "transform-regenerator",
-    \["transform-es2015-modules-commonjs", {"strict": false}\]
-  \]
+    ["transform-es2015-modules-commonjs", {"strict": false}]
+  ]
 }
+```
 
 (Note the last line, with the object in an array: `["transform-es2015-modules-commonjs", {"strict": false}])`
 
 And my package.json ballooned by about 20 lines:
 
+```javascript
 {
-  “dependencies”: {
+  "dependencies": {
     "babel-plugin-check-es2015-constants": "^6.2.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.1.18",
     "babel-plugin-transform-es2015-block-scoped-functions": "^6.1.18",
@@ -66,7 +69,8 @@ And my package.json ballooned by about 20 lines:
     "babel-plugin-transform-regenerator": "^6.2.0",
   }
 }
+```
 
 Now my code’s running smoothly, and I have a migration path set for my code base. Hooray!
 
-\[caption id="" align="alignnone" width="500.0"\]![ Victory dance! ](http://static1.squarespace.com/static/554569a4e4b0b68214c1f5d9/55457b34e4b0fca745eb358d/5655e027e4b0f06765dbac61/1448468526494/dance.gif) Victory dance! \[/caption\]
+![ Victory dance! ](http://static1.squarespace.com/static/554569a4e4b0b68214c1f5d9/55457b34e4b0fca745eb358d/5655e027e4b0f06765dbac61/1448468526494/dance.gif)

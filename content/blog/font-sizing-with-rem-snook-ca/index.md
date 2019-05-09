@@ -7,8 +7,10 @@ Summarizing REMs for CSS units, and how to get your measure to convert nicely be
 
 tl;dr -
 
+```css
 html {
   font-size: 62.5%
 }
+```
 
-// 1px is .1rem
+1px is .1rem

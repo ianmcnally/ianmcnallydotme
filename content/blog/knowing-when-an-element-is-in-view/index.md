@@ -7,13 +7,13 @@ I started working on a lazy image loading component today. There are several pre
 
 First, you create the observer with a callback:
 
-```
+```javascript
 const observer = new IntersectionObserver(callback)
 ```
 
 Then start observing a DOM node (e.g., one with ID my-element):
 
-```
+```javascript
 observer.observer(document.getElementById('my-element'))
 ```
 
@@ -21,7 +21,7 @@ Now, when that element goes in or out of view, the callback (above), is fired wi
 
 So, when the callback gets called, you can check if the element is intersecting:
 
-```
+```javascript
 // in the callback
 const myCallback = (entries) => {
   const myElementEntry = entries[0]
@@ -34,13 +34,13 @@ const myCallback = (entries) => {
 
 And when you want to stop listening, you can either remove the listener on that element:
 
-```
+```javascript
 observer.unobserve(document.getElementById('my-element'))
 ```
 
 Or you can completely remove the listener (and all entries), with disconnect:
 
-```
+```javascript
 observer.disconnect()
 ```
 

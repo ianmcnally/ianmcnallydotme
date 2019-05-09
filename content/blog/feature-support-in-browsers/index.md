@@ -7,6 +7,6 @@ If you find yourself needing to test feature support in browsers, [Dive Into HTM
 
 In my case, can I use `<details>`? Let's find out with:
 
-```
+```javascript
 'open' in document.createElement('details')
 ```

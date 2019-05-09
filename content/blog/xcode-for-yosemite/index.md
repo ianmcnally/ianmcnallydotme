@@ -1,6 +1,7 @@
 ---
 title: "Xcode for Yosemite"
 date: "2014-10-19"
+description: ""
 ---
 
 A little tip from homebrew to me, to you:

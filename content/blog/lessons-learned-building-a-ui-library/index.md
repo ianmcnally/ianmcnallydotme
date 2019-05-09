@@ -11,7 +11,7 @@ It makes layout really easy, and made Schoology's grid system possible. See: [h
 
 ### Build flexible components and avoid blackboxes
 
-In the same way and html component, like <select /> with <option /> gives you components to mix and match, React components should follow a similar design pattern. It will allow for use cases to expand easily. Avoid black boxes that do a lot of work for you, and are controlled by an ever-expanding amount of props and overrides.
+In the same way and html component, like `<select />` with `<option />` gives you components to mix and match, React components should follow a similar design pattern. It will allow for use cases to expand easily. Avoid black boxes that do a lot of work for you, and are controlled by an ever-expanding amount of props and overrides.
 
 ### Use compound components for complex UI pieces
 

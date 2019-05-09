@@ -1,15 +1,8 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
+import Image from 'gatsby-image'
 
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography'
 
 function Bio() {
   return (
@@ -20,7 +13,7 @@ function Bio() {
         return (
           <div
             style={{
-              display: `flex`,
+              display: 'flex',
               marginBottom: rhythm(2.5),
             }}
           >
@@ -31,17 +24,17 @@ function Bio() {
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
                 minWidth: 50,
-                borderRadius: `100%`,
+                borderRadius: '100%',
               }}
               imgStyle={{
-                borderRadius: `50%`,
+                borderRadius: '50%',
               }}
             />
             <p>
               {description}
               {social.twitter && (
                 <>
-                  {" "}
+                  {' '}
                   <a href={`https://twitter.com/${social.twitter}`}>
                     Follow me on Twitter
                   </a>

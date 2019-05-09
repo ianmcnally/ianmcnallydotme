@@ -7,6 +7,7 @@ Today, my team ran into an issue where someone accidentally force pushed their g
 
 A hook is a script called at one of several points in git's lifecycle, and a user has to simply supply their own hook file to run. So, for pre push I created a prepush.sh file. It runs after someone types "git push" but before the push actually happens. If the script exits with a failure, the push in cancelled. Here's the script:
 
+```bash
 ### prepush.sh
 
 #!/bin/sh
@@ -23,23 +24,27 @@ if \[\[ $lastCommand =~ $disallowedCommand \]\] && \[ $currentBranch = $protecte
 fi
 
 exit 0
+```
 
 Then, I created a symlink to the git hooks directory from the shell file:
 
+```bash
 ### setup-git-hooks.sh
 
 #!/bin/sh
 
 # the shell scripts path is relative to the .git/hooks directory
 ln -s -f ../../prepush.sh .git/hooks/pre-push
+```
 
 Lastly, to automate the symlinking of the shell script (which ensures it runs on every developers machine), I added it to our npm scripts. This way, before each developer install node dependencies, the symlink (and therefore, the hook) will be installed.
 
 ### package.json
 
+```javascript
 {
   "scripts": {
     "preinstall": "./setup-git-hooks.sh",
   }
-  // ...
 }
+```

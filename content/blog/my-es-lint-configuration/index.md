@@ -7,24 +7,25 @@ I started using ESLint on a project recently. It took me some time to get over J
 
 I spent some time creating my own .eslintrc file, and if you want to save yourself some precious time, here's it is (also on [github](https://gist.github.com/imcnally/fb778a5d18f68e15e239)):
 
+```javascript
 {
     "rules": {
-        "indent": \[
+        "indent": [
             2, 2
-        \],
-        "quotes": \[
+        ],
+        "quotes": [
             2,
             "single"
-        \],
-        "linebreak-style": \[
+        ],
+        "linebreak-style": [
             2,
             "unix"
-        \],
-        "semi": \[
+        ],
+        "semi": [
             2,
             "never"
-        \],
-        "func-style": \[2, "expression"\],
+        ],
+        "func-style": [2, "expression"],
         "new-parens": 2,
         "no-array-constructor": 2,
         "no-mixed-spaces-and-tabs": 2,
@@ -94,11 +95,11 @@ I spent some time creating my own .eslintrc file, and if you want to save yourse
         "no-with": 2,
         "vars-on-top": 2,
         "wrap-iife": 2,
-        "yoda": \[2, "never"\],
+        "yoda": [2, "never"],
         "no-undef": 2,
         "no-delete-var": 2,
         "no-unused-vars": 2,
-        "arrow-parens": \[2, "always"\],
+        "arrow-parens": [2, "always"],
         "arrow-spacing": 2
     },
     "env": {
@@ -119,9 +120,10 @@ I spent some time creating my own .eslintrc file, and if you want to save yourse
         "modules": true,
         "blockBindings": true
     },
-    "plugins": \[
+    "plugins": [
         "react"
-    \]
+    ]
 }
+```
 
 Happy linting!

@@ -1,3 +1,8 @@
 [[redirects]]
-from = "/blog/:year/:month/:day/:splat"
+  from = "/blog/:year/:month/:day/:splat"
   to = "/:splat"
+
+[[redirects]]
+  from = "/resume"
+  to = "https://drive.google.com/file/d/1vTWoqNGMkF1vCf6r56zWyaOAgUDLpq9t/view"
+
